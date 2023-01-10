@@ -36,3 +36,37 @@
     transform: rotate(360deg);
   }
 }
+
+.articlesWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.articleCards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-style: solid;
+  border-radius: 5px;
+  height: 310px;
+  width: 310px;
+  margin: 14px;
+  background-color:rgb(247, 210, 162)
+}
+
+.article-title {
+  font-size: large;
+}
+.article-topic{font-size:small}
+.article-author{font-size:small}
+.article-created{font-size:small}
+.article-comments{font-size:small}
+
+.NavBar{
+  border-color: black;
+  border-width: 1px;
+  
+}
