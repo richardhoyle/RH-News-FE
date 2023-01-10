@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getArticles } from "../utils/api";
-import ArticleCard from "./Article_Card";
+import ArticleCard from "./ArticleCard";
 
 const Articles = () => {
   const [isLoading, setIsLoading] = useState(false);

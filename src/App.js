@@ -2,13 +2,18 @@ import "./App.css";
 import Header from "./Components/Header";
 import Navigation from "./Components/Navigation";
 import Articles from "./Components/Articles";
+import SingleArticle from "./Components/SingleArticle"
+import {Routes, Route} from  "react-router-dom"
 
 function App() {
   return (
     <div className="App">
       <Header />
       <Navigation />
-      <Articles />
+      <Routes>
+        <Route path="/" element={<Articles />} />
+        <Route path="/article/:article_id" element={<SingleArticle/>} />
+      </Routes>
     </div>
   );
 }
