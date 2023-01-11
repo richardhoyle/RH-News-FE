@@ -54,19 +54,48 @@
   height: 310px;
   width: 310px;
   margin: 14px;
-  background-color:rgb(247, 210, 162)
+  background-color: rgb(247, 210, 162);
 }
 
-.article-title {
-  font-size: large;
+#article-title {
+  font-size: x-large;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
-.article-topic{font-size:small}
-.article-author{font-size:small}
-.article-created{font-size:small}
-.article-comments{font-size:small}
+#article-topic {
+  font-size: small;
+}
+#article-author {
+  font-size: small;
+}
+#article-created {
+  font-size: small;
+}
+#article-comments {
+  font-size: small;
+}
 
-.NavBar{
+.NavBar {
   border-color: black;
   border-width: 1px;
-  
+}
+
+.article-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-style: solid;
+  border-radius: 5px;
+  min-height: 310px;
+  width: 95%;
+  margin: 14px;
+  background-color: rgb(247, 210, 162);
+}
+hr {
+  height: 5px;
+  border-width: 0;
+  background-color: #00a4bd;
+}
+.upvoter {
+background-color: rgb(251, 242, 227);
 }

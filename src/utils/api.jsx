@@ -11,8 +11,7 @@ export const getArticles = (topic) => {
 };
 
 export const getArticleById = (article_id) => {
-  return newsApi.get("/articles/:article_id").then((res) => {
-    console.log(res, "< server response in api");
-    return res.data;
+  return newsApi.get(`/articles/${article_id}`).then((res) => {
+        return res.data;
   });
 };

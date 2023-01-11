@@ -4,21 +4,19 @@ const ArticleCard = (article) => {
     year: "numeric",
     month: "short",
     day: "numeric",
-    hour: "numeric",
-    minute: "numeric",
   });
 
   return (
     <>
-      <h2 className="article-title">{article.title}</h2>
-      <h3 className="article-topic">
+      <h2 id="article-title">{article.title}</h2>
+      <h3 id="article-topic">
         {`Topic: ${
           article.topic.charAt(0).toUpperCase() + article.topic.slice(1)
         }`}
       </h3>
-      <h3 className="article-author">{`Author: ${article.author}`} </h3>
-      <h4 className="article-created">{`Date added: ${formattedDate}`} </h4>
-      <h4 className="article-comments">{`Comments: ${article.comment_count}`}</h4>
+      <h3 id="article-author">{`Author: ${article.author}`} </h3>
+      <h4 id="article-created">{`Date added: ${formattedDate}`} </h4>
+      <h4 id="article-comments">{`Comments: ${article.comment_count}`}</h4>
     </>
   );
 };
