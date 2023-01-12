@@ -22,9 +22,9 @@ const Articles = () => {
     <ul className="articlesWrapper">
       {articles.map((article) => {
         return (
-          <li className="articleCards">
+          <li className="articleCards" key={article.article_id}>
             <Link to={`/articles/${article.article_id}`}>
-              <ArticleCard key={article.article_id} {...article} />
+              <ArticleCard {...article} />
             </Link>
           </li>
         );

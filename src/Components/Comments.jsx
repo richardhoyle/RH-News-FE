@@ -1,16 +1,13 @@
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useEffect } from "react";
 import { getCommentsById } from "../utils/api";
 
 const Comments = ({ setComments, article_id, comments }) => {
-  console.log(article_id);
 
   useEffect(() => {
     getCommentsById(article_id).then(({ comments }) => {
       setComments(comments);
-      console.log(comments, "comments from comments");
     });
-  }, []);
+  }, [article_id, setComments]);
 
   return (
     <div className="comments-wrapper">

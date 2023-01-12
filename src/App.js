@@ -10,10 +10,10 @@ function App() {
     <div className="App">
       <Header />
       <Navigation />
-      <Routes>
-        <Route path="/" element={<Articles />} />
-        <Route path="/articles/:article_id" element={<SingleArticle />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Articles />} />
+          <Route path="/articles/:article_id" element={<SingleArticle />} />
+        </Routes>
     </div>
   );
 }
