@@ -1,9 +1,12 @@
-import React from 'react'
+import { Link } from "react-router-dom"
 
 const Navigation = () => {
-  return (
-    <div className='NavBar'>This will be a Nav Bar</div>
-  )
-}
 
-export default Navigation
+  return (
+    <div className="nav-bar">
+      <Link to="/">All Articles</Link>
+    </div>
+  );
+};
+
+export default Navigation;

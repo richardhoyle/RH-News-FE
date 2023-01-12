@@ -88,19 +88,17 @@
   border-radius: 5px;
   min-height: 310px;
   width: 95%;
-  margin: 14px;
+  margin: 10px;
   background-color: rgb(247, 210, 162);
 }
 hr {
   width: 90%;
   border: 1px solid black;
-
 }
 .upvoter {
-background-color: rgb(251, 242, 227);
+  background-color: rgb(251, 242, 227);
 }
 .comments-wrapper {
-  color-scheme: ;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -113,4 +111,10 @@ background-color: rgb(251, 242, 227);
 }
 .comment-block {
   list-style: none;
+}
+
+.nav-bar {
+  border-color: blue;
+  border-width: 3px;
+  margin: 1px;
 }
