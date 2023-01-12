@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getArticles } from "../utils/api";
-import ArticleCard from "./Article_Card";
+import ArticleCard from "./ArticleCard";
+import { Link } from "react-router-dom";
 
 const Articles = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -22,11 +23,12 @@ const Articles = () => {
       {articles.map((article) => {
         return (
           <li className="articleCards">
-            <ArticleCard key={article.article_id} {...article} />
+            <Link to={`/articles/${article.article_id}`}>
+              <ArticleCard key={article.article_id} {...article} />
+            </Link>
           </li>
         );
       })}
-      {/*also make it a clickable link */}
     </ul>
   );
 };
