@@ -7,7 +7,6 @@ const Like = ({ likes, articleId }) => {
 
   const handleLike = ({ currentTarget }) => {
     const dataValue = currentTarget.getAttribute("data-value");
-    console.log(dataValue);
     setIsError(null);
     if (!dataValue) {
       setLikeChange((currLikeChange) => currLikeChange + 1);
