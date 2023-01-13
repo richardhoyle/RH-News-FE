@@ -13,13 +13,13 @@ const Like = ({ likes, articleId }) => {
       setLikeChange((currLikeChange) => currLikeChange + 1);
       likeArticleById(articleId, 1).catch((err) => {
         setLikeChange((currLikeChange) => currLikeChange - 1);
-        setIsError("Whoops, something went wrong...try again?");
+        setIsError("Whoops, something went wrong. Try again?");
       });
     } else {
       setLikeChange((currLikeChange) => currLikeChange - 1);
       likeArticleById(articleId, -1).catch((err) => {
         setLikeChange((currLikeChange) => currLikeChange + 1);
-        setIsError("Whoops, something went wrong...try again?");
+        setIsError("Whoops, something went wrong. Try again?");
       });
     }
   };
