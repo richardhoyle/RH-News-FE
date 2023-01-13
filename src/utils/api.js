@@ -12,12 +12,22 @@ export const getArticles = (topic) => {
 
 export const getArticleById = (article_id) => {
   return newsApi.get(`/articles/${article_id}`).then((res) => {
-        return res.data;
+    return res.data;
   });
 };
 
 export const getCommentsById = (article_id) => {
   return newsApi.get(`/articles/${article_id}/comments`).then((res) => {
-    return res.data
+    return res.data;
+  });
+};
+
+export const likeArticleById = (article_id, incrementCount) => {
+  const patchBody = {
+    inc_votes: incrementCount,
+  };
+  return newsApi.patch(`/articles/${article_id}`, patchBody)
+    .then(( {data} ) => {
+    return data.article[0].votes
   })
-}
+};

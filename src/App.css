@@ -118,3 +118,7 @@ hr {
   border-width: 3px;
   margin: 1px;
 }
+.vote-err {
+  color: rgb(194, 4, 4);
+  font-size: small;
+}

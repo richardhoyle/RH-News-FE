@@ -2,6 +2,7 @@ import { getArticleById } from "../utils/api";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Comments from "./Comments";
+import Like from "./Like";
 
 const SingleArticle = () => {
   const { article_id } = useParams();
@@ -23,7 +24,7 @@ const SingleArticle = () => {
       setArticle(article);
       setIsLoading(false);
     });
-  }, []);
+  }, [article_id]);
 
   if (isLoading) {
     return <p>Loading your article...</p>;
@@ -36,11 +37,15 @@ const SingleArticle = () => {
         <h2 id="singleArticle-author"> {`Author: ${article.author}`} </h2>
         {/* insert topic when fixed */}
         <h2 id="singleArticle-created_at"> {`Added: ${formattedDate}`}</h2>
-        <button className="upvoter">{`${article.votes} 👍`}</button>
+        <Like likes={article.votes} articleId={article.article_id} />
         <hr></hr>
         <p>{article.body}</p>
       </div>
-    <Comments setComments={setComments} article_id={article_id} comments={comments}/>
+      <Comments
+        setComments={setComments}
+        article_id={article_id}
+        comments={comments}
+      />
     </>
   );
 };
