@@ -9,7 +9,6 @@ const Like = ({ likes, articleId }) => {
     setIsError(null)
     setLikeChange((currLikeChange) => currLikeChange + 1);
     likeArticleById(articleId, 1).catch((err) => {
-      console.log(err, '<err in like')
       setLikeChange((currLikeChange) => currLikeChange - 1);
       setIsError("Whoops, something went wrong...try again?")
     });
