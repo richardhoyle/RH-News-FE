@@ -26,8 +26,23 @@ export const likeArticleById = (article_id, incrementCount) => {
   const patchBody = {
     inc_votes: incrementCount,
   };
-  return newsApi.patch(`/articles/${article_id}`, patchBody)
-    .then(( {data} ) => {
-    return data.article[0].votes
-  })
+  return newsApi
+    .patch(`/articles/${article_id}`, patchBody)
+    .then(({ data }) => {
+      return data.article[0].votes;
+    });
+};
+
+export const postComment = (article_id, username, newCommentBody) => {
+  const newCommentObj = {
+    username: username,
+    body: newCommentBody
+  };
+  console.log(newCommentObj, '<testingg')
+  return newsApi
+    .post(`/articles/${article_id}/comments`, newCommentObj)
+    .then(({ data }) => {
+      console.log(data, "<<return comment from API");
+      return data.comment;
+    });
 };
